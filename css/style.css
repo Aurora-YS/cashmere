@@ -110,28 +110,14 @@ main .slide_wrap .slide_bg{
     width: 500%;
     display: flex;
     flex-wrap: wrap;
-    /* animation: 80s side_slider infinite;
-    animation-delay: 1.5s; */
     transition: margin-left 1s;
 }
 main .slide_wrap .slide_bg .s_bg{
-    /* width: 20%; */
     width: calc(100% / 5);
     height: 1000px;
     background-size: cover;
     background-position: 50% 50%;
 }
-/* @keyframes side_slider{
-    0%{margin-left: 0;}
-    10%{margin-left: -100%;}
-    20%{margin-left: -200%;}
-    35%{margin-left: -300%;}
-    50%{margin-left: -400%;}
-    65%{margin-left: -300%;}
-    80%{margin-left: -200%;}
-    90%{margin-left: -100%;}
-    100%{margin-left: 0;}
-} */
 main .slide_wrap .slide_bg .bg1{background-image: url(../img/main_04.jpg); }
 main .slide_wrap .slide_bg .bg2{background-image: url(../img/main_05.jpg);}
 main .slide_wrap .slide_bg .bg3{background-image: url(../img/main_06.jpg);}
@@ -147,13 +133,13 @@ main .slide_btn{
     z-index: 5;
 }
 main .slide_btn label{
+    display: block;
     width: 20px;
     height: 20px;
     margin: 5px;
-    border-radius: 25px;
-    background-color: transparent;
-    border: 1px solid #fff;
     cursor: pointer;
+    border-radius: 25px;
+    border: 1px solid #fff;
 }
 main .slide_btn label:hover{background-color: rgba(255,255,255,0.3);}
 input#main1:checked ~ main > .slide_btn > .s_btn1,
@@ -373,6 +359,14 @@ main .main_bg h2{
     color: var(--main-grey);
 }
 
+
+#sec03{
+    background-image: url(../img/naturebg-2.png), url(../img/cs-bg.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 0 50%, 100% 50%;
+    background-size: 20%;
+}
 #sec03 #journal{height: 570px;}
 #sec03 #journal .jour_w{}
 #sec03 #journal .jour_w > .cont{
@@ -385,7 +379,6 @@ main .main_bg h2{
     width: calc(25% - 15px);
     height: 350px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     align-content: space-between;
