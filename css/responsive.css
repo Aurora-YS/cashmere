@@ -1,0 +1,146 @@
+@charset "uft-8";
+
+.res_icon{display: none;}
+.res_close{display: none;}
+
+
+@media (max-width:1199px){
+    header .wrap{width: 100%;}
+    header .wrap nav ul li{margin: 0 20px;}
+
+    #main{height: 60vh;}
+    #main .wrap{width: 100%;}
+    #main .wrap h1{
+        bottom: 10vh;
+        font-size: 32px;
+    }
+    
+
+    #cont_01, #cont_02{background-image: none;}
+    #cont_01 article, #cont_02 article{
+        width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    footer .wrap{width: 100%;}
+
+
+}
+
+@media (max-width:991px){
+    header .wrap nav ul li{margin: 0 10px;}
+
+    #cont_02 article:first-child .content .cont_box{width: calc(50% - 20px);}
+
+    footer .wrap .f_main .f_logo{
+        position: static;
+        text-align: center;
+    }
+    footer .wrap .f_main .f_logo img{display: inline-block;}
+    footer .wrap .f_main .f_sns{position: static;}
+    footer .wrap .f_main .f_sns ul{
+        width: 100%;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width:767px){
+    header{
+        height: 60px;
+        background-color: rgba(255,255,255,1);
+    }
+
+    .res_icon{
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        display: block;
+        transform: translateY(-35%);
+        font-size: 36px;
+        color: #373735;
+        cursor: pointer;
+        z-index: 2;
+    }
+
+    header .wrap .logo{
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    header .wrap nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.75);
+        z-index: -1;
+        opacity: 0;
+        /* display: none; */
+        visibility: hidden;
+    }
+    
+    header .wrap nav.active{
+        z-index: 3;
+        opacity: 1;
+        /* display: block; */
+        visibility: visible;
+        transition: opacity 0.5s;
+        transition-delay: 0.3s;
+    }
+
+    .res_close{
+        position: absolute;
+        display: block;
+        top: 10px;
+        right: 20px;
+        font-size: 36px;
+        color: #ddd;
+        cursor: pointer;
+    }
+
+    header .wrap nav ul{flex-direction: column;}
+    header .wrap nav ul li a{
+        line-height: 80px;
+        padding: 0 20px;
+        font-size: 8vw;
+        color: #fff;
+    }
+    header .wrap nav ul li:hover a{color: #fff;}
+    header .wrap nav ul li:hover a::after{background-color: #fff;}
+
+    header .wrap .sns{display: none;}
+
+
+    #cont_01 article:first-child .content .cont_box{width: 100%;}
+    #cont_01 article:last-child .content .cont_box > div{width: calc(100% - 20px);}
+    #cont_01 article:last-child .content .cont_box:first-child{padding-bottom: 60px;}
+
+    #cont_02 article:first-child .content .cont_box{width: calc(100% - 20px);}
+
+    #cont_02 article:first-child .content .cont_box .txt_part{text-align: center;}
+
+    #cont_02 article:first-child .content .cont_box .txt_part .detail p{padding-left: 0;}
+
+    #cont_02 article:first-child .content .cont_box .txt_part .detail p::before{content: "";}
+
+    #cont_02 article:last-child .content .cont_box:nth-child(1),
+    #cont_02 article:last-child .content .cont_box:nth-child(2),
+    #cont_02 article:last-child .content .cont_box:nth-child(3){
+        width: calc(100% - 20px);
+        height: 200px;
+    }
+
+    footer .wrap .f_main .f_info ul{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+
+    footer .wrap .f_main .f_into ul li{
+        width: (50% - 20px);
+        text-align: center;
+    }
+}
+
+/* 반응형 구성간 이유를 찾기가 어려운 파트가 존재한다면, 임시방편으로 body{overflow-x:hidden;} */
